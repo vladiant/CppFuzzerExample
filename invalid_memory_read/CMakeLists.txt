@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.11)
 
-project(FuzzMe LANGUAGES CXX)
+project(InvalidMemoryRead LANGUAGES CXX)
 
 if (NOT CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
    message(FATAL_ERROR "Compiler should be Clang")
@@ -8,7 +8,7 @@ endif()
 
 add_executable(
     ${PROJECT_NAME}
-    fuzz_me.cpp
+    invalid_memory_read.cpp
 )
 
 set_target_properties(
